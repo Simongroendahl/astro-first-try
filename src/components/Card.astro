@@ -1,0 +1,22 @@
+---
+/* Ligesom i JS, erklærer vi her nogle konstanter*/
+
+/*const header = Astro.props.header;
+const text = Astro.props.text;*/
+
+/* Her bruger man slot-tagget, til at kæde det ekstra indhold sammen
+men HTML'en */
+const {header} = Astro.props;
+---
+<article>
+    <h2>{header}</h2>
+    <p>Kortere lorem ipsum</p>
+    <slot />
+</article>
+
+<style>
+    p {
+        color: blue;
+    }
+</style>
+
